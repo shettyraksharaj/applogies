@@ -1,0 +1,107 @@
+<div [ngClass]="getclass()">
+    <div class="header">
+        <h1 style="color: white; font-weight: 900;font-size: 100px;">Hi Chinna</h1>
+    </div>
+    <div class="header-sorry">
+        <h1 style="font-size: 72px;background: -webkit-linear-gradient(#e37474, #53cfd3);-webkit-background-clip: text;-webkit-text-fill-color: transparent; font-weight: 900;font-size: 100px;">I am Sorry</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="h5">
+                    I know i have messed up, made you really angry 😡, I am really sorry for doing that. I know saying sorry will not really do it, I have to do more and with that in mind I came up with this page I am not dance or a singer or an artist, but I am a programmer,
+                    and I can create apps, this is something i created with love❤️❤️.
+                </p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <p class="h3">
+                    Reasons to forgive me:
+                </p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <p class="h3">
+                    The way we both look together:
+                </p>
+            </div>
+        </div>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item d-flex justify-content-center active">
+                    <img src="../assets/images/Photos-001/20221020_170238.jpg" class="d-block" alt="..." height="500px">
+                </div>
+                <div class="carousel-item d-flex justify-content-center">
+                    <img src="../assets/images/Photos-001/20230211_150911.jpg" class="d-block" alt="..." height="500px">
+                </div>
+                <div class="carousel-item d-flex justify-content-center">
+                    <img src="../assets/images/Photos-001/20230211_150914.jpg" class="d-block" alt="..." height="500px">
+                </div>
+                <div class="carousel-item d-flex justify-content-center">
+                    <img src="../assets/images/Photos-001/20230211_150916.jpg" class="d-block" alt="..." height="500px">
+                </div>
+                <div class="carousel-item d-flex justify-content-center">
+                    <img src="../assets/images/Photos-001/PXL_20230716_120728319.MP.jpg" class="d-block" alt="..." height="500px">
+                </div>
+                <div class="carousel-item d-flex justify-content-center">
+                    <img src="../assets/images/Photos-001/Snapchat-1334634560.jpg" class="d-block" alt="..." height="500px">
+                </div>
+                <div class="carousel-item d-flex justify-content-center">
+                    <img src="../assets/images/Photos-001/Snapchat-936650304.jpg" class="d-block" alt="..." height="500px">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black;"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+        </div>
+        <div class="row mt-3">
+            <div class="col ">
+                <p class="h3">I can twerk 🤣🤣:</p>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <div class="col d-flex justify-content-center">
+                <video src="../assets/images/20221126_174055_001.mp4" controls height="500px"></video>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col d-flex justify-content-center ">
+                <p class="h1" style="font-size: 90px; font-weight: 900;">will you forgive me ?🥲🥲 </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-around">
+                <button type="button" class="btn btn-success" (click)="onChoice(true)">Yes ❤️</button>
+                <button type="button" class="btn btn-danger" (click)="onChoice(false)">No 🥲</button>
+            </div>
+        </div>
+        <div *ngFor="let x of forgives">
+            <div *ngIf="!x.value; else yayy" class="mt-5">
+                <div class="row mt-5">
+                    <div class="col d-flex justify-content-center ">
+                        <p class="h1" style="font-size: 90px; font-weight: 900;">Please🥲🥲 </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex justify-content-around">
+                        <button type="button" class="btn btn-success" (click)="onChoice(true)">Yes ❤️</button>
+                        <button type="button" class="btn btn-danger" (click)="onChoice(false)">No 🥲</button>
+                    </div>
+                </div>
+            </div>
+            <ng-template class=" row mt-3" #yayy>
+                <div class="col d-flex justify-content-center ">
+                    <p class="h1" style="font-size: 90px; font-weight: 900;">Yayy❤️❤️💋💋</p>
+                </div>
+            </ng-template>
+        </div>
+        <span #target></span>
+    </div>
+</div>
